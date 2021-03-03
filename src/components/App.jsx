@@ -1,10 +1,6 @@
 //estilos
-import '../style/component/App.scss'
+import '../style/component/App.scss';
 
+const App = () => <h1>Hola Mundo</h1>;
 
-const App = ( ) => <h1>Hola Mundo</h1>
-
-export default App
-
-
-
+export default App;
