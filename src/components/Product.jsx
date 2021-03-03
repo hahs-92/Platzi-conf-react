@@ -1,6 +1,8 @@
 
-const Product = ( { product }) => {
+const Product = ( { product, handleAddToCart }) => {
+
     const { image,title,price,description } = product
+    
     return(
         <article className="Products-item">
             <img src={ image } alt={ title }/>
@@ -8,7 +10,7 @@ const Product = ( { product }) => {
                 <h2>{ title } <span>$ { price }</span></h2>
                 <p>{ description }</p>
             </section>
-            <button type='buttom'>Comprar</button>
+            <button type='buttom' onClick={ handleAddToCart(product)}>Comprar</button>
         </article>
     )
 }
