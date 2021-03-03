@@ -5,7 +5,17 @@ import '../style/containers/Payment.scss'
 
 const Payment = () => {
     return(
-        <h1>Payment</h1>
+        <section className="Payment">
+            <article className="Payment-content">
+                <h3>Resumen del Pedido:</h3>
+            </article>
+            <div className="Payment-button">
+                Boton de Paypal
+            </div>
+            <aside>
+                
+            </aside>
+        </section>
     )
 }
 
