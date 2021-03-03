@@ -25,6 +25,7 @@ const Products = () => {
         addToCart(product)
     }
 
+
     return(
         <section className="Products">
             <div className="Products-items">
@@ -37,7 +38,7 @@ const Products = () => {
     )
 }
 
-
+//SIN EL USO DE USECONTEXT
 // const Products = ( { products } ) => {
 //     return(
 //         <section className="Products">
