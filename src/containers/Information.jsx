@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 //estilos
 import '../style/containers/Information.scss'
 
@@ -46,7 +48,9 @@ const Information = () => {
                         Regresar
                     </div>
                     <div className="Information-next">
-                        Pagar
+                        <Link to='/checkout/payment'>
+                            Pagar
+                        </Link>
                     </div>
                 </section>
             </article>
