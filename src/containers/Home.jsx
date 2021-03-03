@@ -1,6 +1,14 @@
+//INITIALSTATE
+import initialState from '../initialState'
+
+//COMPONENETS
+import Products from '../components/Products'
+
+
+
 const Home = () => {
     return(
-        <h1>Home </h1>
+        <Products products={ initialState.products } />
     )
 }
 
