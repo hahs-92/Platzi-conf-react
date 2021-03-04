@@ -24,7 +24,7 @@ const Payment = () => {
 
     //CONFIFG PAYPAL
     const paypalOptions = {
-        clienteId: 'AYcNsu9c8vRV5X36uWW86emKG1epnpQJlCpiFbpusnSmbVLP8QbVyuWKxsyuOcyTPqgazom-Qpi7TeeF',
+        clientId: 'AYcNsu9c8vRV5X36uWW86emKG1epnpQJlCpiFbpusnSmbVLP8QbVyuWKxsyuOcyTPqgazom-Qpi7TeeF',
         intent: 'capture',
         currency: 'USD'
     }
