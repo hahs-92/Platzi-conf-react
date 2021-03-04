@@ -1,5 +1,5 @@
 import { useRef, useContext } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 //CONTEXT
 import AppContext from '../context/AppContext'
@@ -13,6 +13,9 @@ import '../style/containers/Information.scss'
 const Information = () => {
 
     const { state: { cart}, addToBuyer } = useContext(AppContext)
+
+    //USEHYSTORY
+    const history = useHistory()
 
     //USEREF
     const form = useRef(null)
@@ -36,6 +39,7 @@ const Information = () => {
         }
 
         addToBuyer(buyer)
+        history.push('/checkout/payment')
     }
 
 
