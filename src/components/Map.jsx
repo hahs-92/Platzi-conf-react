@@ -1,4 +1,4 @@
-import { GoogleMap, LoadScript, Marker, Master } from '@react-google-maps/api'
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'
 
 
 
