@@ -11,15 +11,15 @@ import '../style/containers/Checkout.scss'
 
 const Checkout= () => {
 
-    // const { state:{ cart }, removeFromCart } = useContext(AppContext)
-    const { state, removeFromCart } = useContext(AppContext)
-    const { cart } = state
+    const { state:{ cart }, removeFromCart } = useContext(AppContext)
+    // const { state, removeFromCart } = useContext(AppContext)
+    // const { cart } = state
 
-    const handleRemove = product => () => {
-        removeFromCart(product)
+    const handleRemove = (product,i) => () => {
+        removeFromCart(product,i)
     }
 
-    //FUNCION CLOUSURE ENCARGADA DE ELIMINAR LOS PRODUCTOS
+    //FUNCION ENCARGADA DE ELIMINAR LOS PRODUCTOS
     const HandleSummTotal = () => {
         const reducer = (accumulator, currentValue) => accumulator + currentValue.price
         const sum = cart.reduce(reducer, 0)
@@ -36,14 +36,14 @@ const Checkout= () => {
                     : <h3>Sin pedidos</h3>
                 }
 
-                { cart.map(item => (
-
-                    <article  className="Checkout-item">
+                { cart.map((item, i) => (
+                    
+                    <article key={ item + i } className="Checkout-item">
                         <div className="Checkout-element">
                             <h4>{ item.title }</h4>
                             <span>${ item.price }</span>
                         </div>
-                            <button type='button' onClick={ handleRemove(item)}>
+                            <button type='button' onClick={ handleRemove(item,i)}>
                                 <i className='fas fa-trash-alt' title='eliminar'></i>
                             </button>
                     </article>
