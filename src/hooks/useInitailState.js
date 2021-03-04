@@ -27,10 +27,19 @@ const useInitialState = () => {
         })
     }
 
+    //FUNCION PARA PAYPAL
+    const addNewOrder = payload => {
+        setState({
+            ...state,
+            orders: [...state.orders, payload ]
+        })
+    }
+
     return {
         addToCart,
         removeFromCart,
         addToBuyer,
+        addNewOrder,
         state
     }
 }

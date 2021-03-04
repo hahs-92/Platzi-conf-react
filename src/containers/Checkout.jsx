@@ -15,11 +15,12 @@ const Checkout= () => {
     // const { state, removeFromCart } = useContext(AppContext)
     // const { cart } = state
 
+    //FUNCION ENCARGADA DE ELIMINAR LOS PRODUCTOS
     const handleRemove = (product,i) => () => {
         removeFromCart(product,i)
     }
 
-    //FUNCION ENCARGADA DE ELIMINAR LOS PRODUCTOS
+    //FUNCION PARA CONTAR LOS ITEMS
     const HandleSummTotal = () => {
         const reducer = (accumulator, currentValue) => accumulator + currentValue.price
         const sum = cart.reduce(reducer, 0)
